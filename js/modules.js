@@ -1,4 +1,4 @@
-core.create_module("search-box", function(sb) { 
+core.createModule("search-box", function(sb) { 
 	var input, button, reset;
 	
 	return {
@@ -23,7 +23,7 @@ core.create_module("search-box", function(sb) {
 					data: query
 				});
 			}
-		}
+		},
 		quitSearch: function() { 
 			input.value = "";
 			sb.notify({
@@ -34,7 +34,7 @@ core.create_module("search-box", function(sb) {
 	};
 });
 
-core.create_module("filters-bar", function(sb) { 
+core.createModule("filters-bar", function(sb) { 
 	var filters; 
 	
 	return {
@@ -55,7 +55,7 @@ core.create_module("filters-bar", function(sb) {
 	};
 });
 
-core.create_module("product-panel", function(sb) { 
+core.createModule("product-panel", function(sb) { 
 	
 	var products;
 	
@@ -133,7 +133,7 @@ core.create_module("product-panel", function(sb) {
 	}
 });
 
-core.create_module("shopping-cart", function(sb) { 
+core.createModule("shopping-cart", function(sb) { 
 	var cart, cartItems;
 	
 	return {
@@ -147,7 +147,7 @@ core.create_module("shopping-cart", function(sb) {
 			});
 		},
 		
-		destory: function() { 
+		destroy: function() { 
 			cart = cartItems = null;
 			sb.ignore(['add-item']);
 		},
